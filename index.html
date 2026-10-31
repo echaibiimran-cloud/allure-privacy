@@ -1,55 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de confidentialité — Allure</title>
-  <style>
-    body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 32px; }
-    p, li { font-size: 15px; color: #333; }
-    .date { color: #888; font-size: 14px; margin-bottom: 32px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — ALLURE</title>
+<meta name="description" content="Politique de confidentialité de l'application de coaching de course à pied ALLURE.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a1a; --muted:#5c5c5c; --accent:#00c46a;
+    --card:#f6f7f8; --border:#e4e6e8; --th:#eef0f1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1210; --fg:#e8eae9; --muted:#9aa0a0; --accent:#2ee88a;
+      --card:#171b18; --border:#262b27; --th:#1d221e;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1210; --fg:#e8eae9; --muted:#9aa0a0; --accent:#2ee88a;
+    --card:#171b18; --border:#262b27; --th:#1d221e;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg)}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:17px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+  header{margin-bottom:8px}
+  .brand{font-weight:800;letter-spacing:.14em;color:var(--accent);font-size:15px;margin:0 0 20px}
+  h1{font-size:30px;line-height:1.2;margin:0 0 6px}
+  .updated{color:var(--muted);font-size:15px;margin:0 0 36px}
+  h2{font-size:21px;margin:40px 0 10px;padding-top:8px}
+  h3{font-size:17px;margin:24px 0 6px}
+  p,li{color:var(--fg)}
+  .muted{color:var(--muted)}
+  a{color:var(--accent)}
+  ul{padding-left:22px;margin:10px 0}
+  li{margin:6px 0}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15.5px}
+  th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--th);font-weight:700}
+  .note{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:15.5px}
+  hr{border:none;border-top:1px solid var(--border);margin:36px 0}
+  footer{color:var(--muted);font-size:14px;margin-top:48px}
+</style>
 </head>
 <body>
+<div class="wrap">
+<header>
+  <p class="brand">ALLURE</p>
   <h1>Politique de confidentialité</h1>
-  <p class="date">Dernière mise à jour : mai 2025</p>
+  <p class="updated">Dernière mise à jour : 31 octobre 2026</p>
+</header>
 
-  <p>Allure (« l'Application ») est une application de coaching à la course à pied. Cette politique explique quelles données nous collectons, comment nous les utilisons et quels sont vos droits.</p>
+<p>ALLURE (« l'application », « nous ») est une application de coaching de course à pied. La protection de tes données personnelles est une priorité. Cette politique explique quelles données nous collectons, pourquoi, comment elles sont utilisées, et quels sont tes droits.</p>
 
-  <h2>1. Données collectées</h2>
-  <ul>
-    <li><strong>Données de profil</strong> : prénom, sexe, date de naissance, poids, taille, objectif de course. Ces données sont stockées localement sur votre appareil.</li>
-    <li><strong>Données de course</strong> : GPS, distance, durée, allure, dénivelé. Stockées localement sur votre appareil.</li>
-    <li><strong>Compte communauté</strong> (optionnel) : adresse e-mail, nom d'utilisateur. Stockés sur nos serveurs Supabase si vous créez un compte.</li>
-    <li><strong>Données partagées</strong> (optionnel) : résumés de courses publiés sur le fil communautaire.</li>
-  </ul>
+<h2>1. Responsable du traitement</h2>
+<p>Le responsable du traitement des données est <strong>ALLURE</strong>, joignable à l'adresse : <strong>contact@allure-running.com</strong>.</p>
 
-  <h2>2. Utilisation des données</h2>
-  <ul>
-    <li>Générer des plans d'entraînement personnalisés via l'IA (les données sont envoyées de façon anonymisée à l'API Anthropic).</li>
-    <li>Afficher votre historique et vos statistiques.</li>
-    <li>Permettre les fonctionnalités sociales si vous y participez.</li>
-  </ul>
+<h2>2. Quelles données nous collectons</h2>
 
-  <h2>3. Partage des données</h2>
-  <p>Nous ne vendons jamais vos données. Elles peuvent être transmises à :</p>
-  <ul>
-    <li><strong>Anthropic</strong> (analyse IA) — données anonymisées, sans nom ni identifiant.</li>
-    <li><strong>Supabase</strong> (infrastructure) — uniquement si vous créez un compte.</li>
-  </ul>
+<h3>2.1 Données de localisation (GPS)</h3>
+<p>Pendant une course, l'application enregistre ta position GPS pour tracer ton parcours, calculer ta distance, ton allure et ton dénivelé. La localisation n'est utilisée que lorsque tu lances une course (y compris en arrière-plan ou écran verrouillé, afin de ne pas interrompre le suivi). Elle n'est pas utilisée en dehors de tes activités de course.</p>
 
-  <h2>4. Localisation</h2>
-  <p>L'accès au GPS est demandé uniquement pendant une course active. Les données de localisation ne sont jamais transmises à des tiers.</p>
+<h3>2.2 Données de santé et d'activité physique</h3>
+<p>Avec ton autorisation, l'application lit certaines données depuis l'application Santé d'Apple (HealthKit), notamment ta <strong>fréquence cardiaque</strong>, pour analyser ton effort et personnaliser ton coaching. Ces données ne sont lues qu'avec ton consentement explicite, que tu peux retirer à tout moment dans les réglages de ton appareil.</p>
 
-  <h2>5. Conservation des données</h2>
-  <p>Les données locales restent sur votre appareil jusqu'à la suppression de l'application. Les données de compte peuvent être supprimées sur demande.</p>
+<h3>2.3 Données de course</h3>
+<p>L'application enregistre les données de tes courses : distance, durée, allure, splits, dénivelé, type de séance, ressenti, notes, et le tracé du parcours. Ces données sont stockées <strong>localement sur ton appareil</strong>. Si tu crées un compte, certaines de ces données peuvent être synchronisées ou partagées (voir §2.5).</p>
 
-  <h2>6. Vos droits</h2>
-  <p>Vous pouvez demander l'accès, la correction ou la suppression de vos données en nous contactant.</p>
+<h3>2.4 Données de compte</h3>
+<p>La création d'un compte est <strong>optionnelle</strong> — l'application fonctionne sans compte. Si tu en crées un, nous collectons ton <strong>adresse email</strong> et ton <strong>pseudonyme</strong>, gérés via notre prestataire d'authentification (Supabase). Ton mot de passe est stocké de manière chiffrée et ne nous est jamais accessible en clair.</p>
 
-  <h2>7. Contact</h2>
-  <p>Pour toute question : <a href="mailto:contact@allure-app.fr">contact@allure-app.fr</a></p>
+<h3>2.5 Données sociales et photos</h3>
+<p>Si tu utilises les fonctionnalités communautaires, les courses, défis, photos (avatar et photos de course), « j'aime » et abonnements que tu choisis de partager sont stockés sur nos serveurs et visibles selon les paramètres de partage que tu définis.</p>
+
+<h3>2.6 Météo</h3>
+<p>L'application peut récupérer les conditions météo (température, vent) correspondant à ta course, à partir de ta localisation, pour enrichir l'analyse de ta séance.</p>
+
+<h3>2.7 Pas de publicité, pas de traçage publicitaire</h3>
+<p>ALLURE <strong>ne collecte pas</strong> de données à des fins publicitaires, ne vend <strong>aucune</strong> donnée, et n'intègre <strong>aucun traqueur publicitaire tiers</strong>. À ce jour, l'application n'utilise pas d'outil de statistiques d'usage (analytics). Si cela devait changer, cette politique serait mise à jour en conséquence.</p>
+
+<h2>3. Comment nous utilisons tes données</h2>
+<p>Nous utilisons tes données uniquement pour :</p>
+<ul>
+  <li>fournir le suivi de tes courses (GPS, distance, allure, dénivelé) ;</li>
+  <li>analyser tes séances et générer un coaching personnalisé par intelligence artificielle ;</li>
+  <li>créer et adapter tes plans d'entraînement ;</li>
+  <li>gérer ton compte et, le cas échéant, les fonctionnalités communautaires ;</li>
+  <li>assurer le bon fonctionnement, la sécurité et l'amélioration de l'application.</li>
+</ul>
+<p>Nous ne prenons aucune décision produisant des effets juridiques à ton égard de manière entièrement automatisée. Le coaching fourni est une recommandation sportive, <strong>non un avis médical</strong>.</p>
+
+<h2>4. Partage des données avec des tiers</h2>
+<p>Tes données ne sont partagées qu'avec les prestataires strictement nécessaires au fonctionnement de l'application :</p>
+<table>
+  <thead><tr><th>Prestataire</th><th>Rôle</th><th>Données concernées</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Supabase</strong></td><td>Hébergement du compte, des données sociales et des photos</td><td>Email, pseudo, courses partagées, photos, données sociales</td></tr>
+    <tr><td><strong>Anthropic (Claude)</strong></td><td>Génération de l'analyse et du coaching par IA</td><td>Données de la course analysée (distance, allure, dénivelé, FC, ressenti, etc.)</td></tr>
+    <tr><td><strong>Apple</strong></td><td>Système d'exploitation, HealthKit, notifications</td><td>Selon les autorisations que tu accordes</td></tr>
+  </tbody>
+</table>
+<p>Ces prestataires traitent les données pour notre compte, conformément à leurs propres engagements de sécurité et de confidentialité. Nous ne vendons ni ne louons tes données à qui que ce soit.</p>
+
+<h2>5. Où sont stockées tes données</h2>
+<ul>
+  <li><strong>Sur ton appareil</strong> : l'historique de tes courses et tes plans sont stockés localement.</li>
+  <li><strong>Sur nos serveurs</strong> (via Supabase, hébergement en Union européenne — région Irlande) : les données de compte, sociales et les photos, si tu crées un compte et utilises ces fonctionnalités.</li>
+  <li>Les données envoyées à l'IA (Anthropic) pour l'analyse ne sont pas conservées à des fins d'entraînement de modèles.</li>
+</ul>
+
+<h2>6. Durée de conservation</h2>
+<ul>
+  <li>Les données locales sont conservées sur ton appareil tant que tu n'effaces pas l'application ou les données.</li>
+  <li>Les données de compte sont conservées tant que ton compte existe. Lorsque tu supprimes ton compte (voir §8), elles sont effacées de nos serveurs, y compris tes photos.</li>
+</ul>
+
+<h2>7. Sécurité</h2>
+<p>Nous mettons en œuvre des mesures techniques raisonnables pour protéger tes données : chiffrement des communications, authentification sécurisée, accès restreint aux données. Aucun système n'étant infaillible, nous ne pouvons garantir une sécurité absolue, mais nous nous engageons à agir rapidement en cas d'incident.</p>
+
+<h2>8. Tes droits</h2>
+<p>Conformément au Règlement Général sur la Protection des Données (RGPD), tu disposes des droits suivants :</p>
+<ul>
+  <li><strong>Accès</strong> : savoir quelles données nous détenons sur toi.</li>
+  <li><strong>Rectification</strong> : corriger des données inexactes.</li>
+  <li><strong>Effacement</strong> : supprimer ton compte et les données associées, directement depuis l'application (Profil → Compte → Supprimer mon compte). Cette suppression est définitive et efface tes données de nos serveurs, y compris tes photos.</li>
+  <li><strong>Portabilité</strong> et <strong>opposition</strong> : tu peux nous contacter pour exercer ces droits.</li>
+  <li><strong>Retrait du consentement</strong> : tu peux retirer à tout moment les autorisations de localisation et de santé dans les réglages de ton appareil.</li>
+</ul>
+<p>Pour toute demande, écris-nous à <strong>contact@allure-running.com</strong>. Tu as également le droit d'introduire une réclamation auprès de l'autorité de protection des données compétente (en Belgique, l'Autorité de protection des données — APD).</p>
+
+<h2>9. Données des mineurs</h2>
+<p>ALLURE n'est pas destinée aux enfants de moins de 16 ans. Nous ne collectons pas sciemment de données concernant des mineurs de moins de 16 ans. Si tu penses qu'un mineur nous a transmis des données, contacte-nous pour que nous les supprimions.</p>
+
+<h2>10. Modifications de cette politique</h2>
+<p>Nous pouvons mettre à jour cette politique de confidentialité. En cas de changement important, nous t'en informerons via l'application ou par email. La date de dernière mise à jour figure en haut de ce document.</p>
+
+<h2>11. Contact</h2>
+<p>Pour toute question concernant cette politique ou tes données personnelles : <strong>contact@allure-running.com</strong>.</p>
+
+<hr>
+<footer>© 2026 ALLURE — allure-running.com</footer>
+</div>
 </body>
 </html>
